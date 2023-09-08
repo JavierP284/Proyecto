@@ -1,0 +1,1 @@
+c++ src/Main.cpp -o bin/ejecutable -I include
