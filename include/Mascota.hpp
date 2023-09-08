@@ -21,10 +21,12 @@ public:
     {
         this->hambre -= comida;
     }
-    std::string DecirNombre(){
+    std::string DecirNombre()
+    {
         return this->nombre;
     }
-    int DecirHambre(){
+    int DecirHambre()
+    {
         return this->hambre;
     }
 };
