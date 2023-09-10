@@ -29,4 +29,5 @@ public:
     {
         return this->hambre;
     }
+    int 
 };
