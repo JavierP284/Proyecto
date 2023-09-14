@@ -1,0 +1,188 @@
+@startuml
+Class Jugador{
+    - nombre = string
+    + EstablecerNombre()
+}
+class Personaje
+Class Movimiento{
+    + MoverDerecha()
+    + MoverIzquierda()
+    + MoverArriba()
+    + MoverAbajo()
+}
+Class Menu{
+    +NuevaPartida()
+    +Continuar()
+    +Salir()
+}
+Class Pokemon{
+    + Atacar()
+}
+Class Pokeyen
+Class Tipo
+Class TipoFuego
+class TipoAgua 
+class TipoElectrico
+class TipoPlanta
+Class Objeto{
+    + Aumentar()
+    + Reducir()
+}
+Class Pokeball{
+    + Lanzar()
+}
+Class Charmander
+Class Pikachu
+class Squirtle
+class Bulbasaur
+Class Pocion{
+    + Curar()
+}
+class Bicicleta
+Class Antidoto{
+    + EliminarVeneno
+}
+class Pokedex{
+    + RegistrarPokemon()
+}
+class Ataque{
+    + HacerDaño()
+}
+Class AtaqueElectrico
+Class AtaqueFuego
+Class AtaquePlanta
+Class AtaqueAgua
+Class AtaqueNormal
+class Mochila{
+    + Guardar()
+    + Abrir()
+    + Cerrar()
+}
+class Monedero
+class Ascuas
+class Drenadoras
+class Impactrueno
+class Burbuja
+Class Placaje
+Class PokemonSalvaje
+Class EntrenadorPokemon
+Class LiderGimnasio
+Class Nadador
+Class Marinero
+Class CampeonDeLiga
+Class NPC
+Class HP
+Class EnfermeraJoy{
+    + CurarPokemon()
+}
+Class Enemigo{
+    + Retar
+}
+Class Escenario
+class HierbaAlta
+Class Camino 
+Class Construccion{
+    +Entrar()
+    +Salir()
+}
+Class Lago 
+Class Oceano
+
+Jugador o-- Menu
+Jugador o-- Personaje
+Personaje o-- Movimiento
+Bicicleta o-- Movimiento
+Enemigo --|> NPC
+
+Escenario *-- HierbaAlta
+Escenario *-- Camino
+Escenario *-- Construccion
+Escenario *-- Lago
+Escenario *-- Oceano
+Escenario *-- NPC
+
+HierbaAlta *-- PokemonSalvaje
+
+Pikachu --|> Pokemon
+Pikachu --|> TipoElectrico
+Pikachu o-- AtaqueElectrico
+Pikachu o-- AtaqueNormal
+
+Charmander --|> Pokemon
+Charmander --|> TipoFuego
+Charmander o-- AtaqueFuego
+Charmander o-- AtaqueNormal
+
+Squirtle --|> Pokemon
+Squirtle --|> TipoAgua
+Squirtle o-- AtaqueAgua
+Squirtle o-- AtaqueNormal
+
+Bulbasaur --|> Pokemon
+Bulbasaur --|> TipoPlanta
+Bulbasaur o-- AtaquePlanta
+Bulbasaur o-- AtaqueNormal
+
+TipoFuego --|> Tipo
+TipoAgua --|> Tipo
+TipoPlanta --|> Tipo
+TipoElectrico --|> Tipo
+
+Pocion --|> Objeto
+Pokeball --|> Objeto
+Antidoto --|> Objeto
+Bicicleta --|> Objeto
+Pokedex --|> Objeto
+Pokeyen --|> Objeto
+
+Personaje "1" *-- "*" Mochila
+Personaje *-- Monedero
+Personaje "1" *-- "*" Pokemon
+Personaje o-- Objeto
+Personaje o-- PokemonSalvaje
+Personaje o-- NPC
+
+Mochila *-- Objeto
+
+Pokeball "1" *-- "*" Pokemon
+
+Pokemon "1" *-- "1..2" Tipo
+Pokemon "1" *-- "0 ..100" HP
+Pokemon "1" *-- "1..4" Ataque
+
+AtaqueAgua --|> Ataque
+AtaqueElectrico --|> Ataque
+AtaqueFuego --|> Ataque
+AtaquePlanta --|> Ataque
+AtaqueNormal --|> Ataque
+
+Burbuja --|> AtaqueAgua
+Ascuas --|> AtaqueFuego
+Drenadoras --|> AtaquePlanta
+Impactrueno --|> AtaqueElectrico
+Placaje --|> AtaqueNormal
+
+PokemonSalvaje --|>Pokemon
+
+EntrenadorPokemon --|> Enemigo
+EntrenadorPokemon *-- Pokemon
+EntrenadorPokemon o-- Objeto
+
+LiderGimnasio --|> Enemigo
+LiderGimnasio *-- Pokemon
+LiderGimnasio o-- Objeto
+
+Nadador --|> Enemigo
+Nadador *-- Pokemon
+Nadador o-- Objeto
+
+Marinero --|> Enemigo
+Marinero *-- Pokemon
+Marinero o-- Objeto
+
+CampeonDeLiga --|> Enemigo
+CampeonDeLiga *-- Pokemon
+CampeonDeLiga o-- Objeto
+
+EnfermeraJoy --|> NPC
+@enduml
