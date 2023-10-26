@@ -11,6 +11,10 @@
 A los usuarios de los videojuegos se los denomina Entrenador Pokémon. Tienen como meta cumplir dos objetivos capturar a todas las especies de pokémon disponibles en la región ficticia en donde se encuentra ambientado el juego, y completar así la información de todos los pokémon en el Pokédex; por otro lado, deben entrenarlos y enfrentarlos a otros pokémon pertenecientes a otros entrenadores para demostrar sus habilidades, fortaleza, talento y así convertirse en un Maestro Pokémon. Para lograrlo, los entrenadores pokémon viajan a lo largo y ancho de las regiones del mundo Pokémon, recolectando medallas de gimnasio, que se obtienen tras derrotar a los respectivos líderes de gimnasio, en una batalla en la que tanto el entrenador como el líder de gimnasio enfrentan a sus pokémon para probar sus habilidades especiales en una batalla Pokémon.
 ![](https://kyaooo.net/wp-content/uploads/2021/08/cambiar-nombre-de-entrenador-pokemon-unite-1.jpg)
 
+## Controles
+Su jugabilidad es muy simple en esta el jugador se puede desplazar por la pantalla con las teclas W, A, S, D de su teclado.
+![](https://www.creativefabrica.com/wp-content/uploads/2021/10/12/WASD-computer-keyboard-buttons-Desktop-Graphics-18727759-1-580x387.jpg)
+
 ## Pokemon
 Los Pokémon son una clase de criaturas inspiradas en animales reales, insectos, objetos, plantas o criaturas mitológicas con un sistema de evolución lamarckiano. 
 
@@ -28,3 +32,5 @@ Los pokémon también se ordenan y dividen de esta manera, dándole ventajas o d
 
 ## Contacto
 a22310284@ceti.mx
+
+![](https://educacionmediasuperior.sep.gob.mx/work/models/sems/gobmx/img/logos/ceti.jpg)

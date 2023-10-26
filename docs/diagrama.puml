@@ -87,12 +87,20 @@ Class Construccion{
 }
 Class Lago 
 Class Oceano
+Class Dibujo
+Class Ventana
 
 Jugador o-- Menu
 Jugador o-- Personaje
 Personaje o-- Movimiento
 Bicicleta o-- Movimiento
 Enemigo --|> NPC
+
+Ventana"1" o-- "*"Dibujo
+Menu o-- Ventana
+DIbujo o-- Escenario
+Pokemon *-- Dibujo
+NPC *-- Dibujo
 
 Escenario *-- HierbaAlta
 Escenario *-- Camino
