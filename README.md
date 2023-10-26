@@ -13,6 +13,7 @@ A los usuarios de los videojuegos se los denomina Entrenador Pokémon. Tienen co
 
 ## Controles
 Su jugabilidad es muy simple en esta el jugador se puede desplazar por la pantalla con las teclas W, A, S, D de su teclado.
+
 ![](https://www.creativefabrica.com/wp-content/uploads/2021/10/12/WASD-computer-keyboard-buttons-Desktop-Graphics-18727759-1-580x387.jpg)
 
 ## Pokemon
