@@ -1,20 +1,50 @@
-#include <iostream>
-#include <Mascota.hpp>
+#include <Ventana.hpp>
+#include <Dibujo.hpp>
+#include <curses.h>
+#include <unistd.h>
 
 int main(int argc, char const *argv[])
 {
-    std::cout << "Juego de Mascotas" << std::endl;
 
-    Mascota m1("Puerca");
-    m1.Jugar();
-    m1.Jugar();
-    m1.Jugar();
+    Ventana v;
 
-    std::cout
-        << m1.DecirNombre() << " tiene"
-        << m1.DecirHambre() << " de hambre.";
+    Dibujo d1(1,1,"trainer");
+    Dibujo d2(1,1,"escenario");
+    bool ejecucion = true;
+    while (ejecucion)
+    {
+        //ciclo de actualizacion
+        v.Actualizar();
+        int input = getch();
+        switch (input)
+        {
+            case 'q':
+                ejecucion = false;
+                break;
+            case 'd':
+                d1.AvanzarX(1);
+                break;
+            case 'a':
+                d1.RetrocederX(1);
+                break;
+            case 'w':
+                d1.RetrocederY(1); // Mueve hacia arriba en Y
+                break;
+            case 's':
+                d1.AvanzarY(1); // Mueve hacia abajo en Y
+                break;
+        }
+        //ciclo de dibujo
+        clear();
+        d2.Dibujar();
+        d1.Dibujar();
+        
+        //v.Dibujar();
 
-    m1.Comer(5);
+        refresh();
+        usleep(41000); //24 fps
+    }
 
     return 0;
 }
+
